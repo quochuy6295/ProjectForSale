@@ -1,10 +1,9 @@
 package projectmicroservice.projectforsale.repository;
 
-import lombok.extern.java.Log;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import projectmicroservice.projectforsale.entity.MspProperties;
+import projectmicroservice.projectforsale.entity.UbiGlobal;
 
 @Repository
-public interface MspPropertiesRepository extends JpaRepository<MspProperties, Long> {
+public interface UbiGlobalRepository extends JpaRepository<UbiGlobal, Long> {
 }

@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "msp_category")
-public class MspCategory {
+@Table(name = "ubi_support")
+public class UbiSupport {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class MspCategory {
 
     private Long property_id;
 
-    private Long category_path;
+    private Long global_id;
 
     private String category_path_name;
 
@@ -24,9 +24,7 @@ public class MspCategory {
 
     private String title;
 
-    private String contents;
-
-    private LocalDateTime createAt;
+    private LocalDateTime createdDt;
 
     private LocalDateTime showStartDate;
 
