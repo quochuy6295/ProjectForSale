@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class LnbResponseDto {
 
     private String value;
@@ -17,5 +15,12 @@ public class LnbResponseDto {
 
     private String category;
 
-    private Integer count;
+    private Long count;
+
+    public LnbResponseDto(String value, Integer seq, String category, Long count) {
+        this.value = value;
+        this.seq = seq;
+        this.category = category;
+        this.count = count;
+    }
 }

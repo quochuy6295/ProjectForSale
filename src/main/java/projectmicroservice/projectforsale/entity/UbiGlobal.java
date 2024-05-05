@@ -23,7 +23,9 @@ public class UbiGlobal {
     @CreatedDate
     private LocalDateTime createAt;
 
-    private Integer state;
+    private String state;
 
     private Integer seq;
+
+    private String lang;
 }

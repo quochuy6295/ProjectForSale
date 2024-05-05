@@ -14,8 +14,6 @@ public class UbiSupport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long property_id;
-
     private Long global_id;
 
     private String category_path_name;
@@ -35,4 +33,6 @@ public class UbiSupport {
     private LocalDateTime alarmEndDate;
 
     private Integer hitCount;
+
+    private String category;
 }

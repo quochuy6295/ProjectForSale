@@ -17,11 +17,6 @@ public class Page<T> {
     public Page(){
     }
 
-    public Page(PageInfo pageInfo){
-        this.currentPage = pageInfo.getCurrentPage();
-        this.pageSize = pageInfo.getPageSize();
-    }
-
     public Page<T> withResult(List<T> result){
         this.result = result;
         return this;
