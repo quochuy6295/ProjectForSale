@@ -26,6 +26,7 @@ public interface UbiSupportRepository extends JpaRepository<UbiGlobal, Long>, Ub
             " LEFT JOIN UbiSupportDetail de ON de.support_id = su.id" +
             " WHERE ubi.key = :type AND ubi.state = :state AND ubi.lang = :lang " +
             " AND (:category IS null OR UPPER(su.category) = UPPER(:category))" +
+            " AND (:title IS null OR su.title LIKE :title)" +
             " ORDER BY su.createdDt")
-    Page<ContentDto> getDetail(String lang, String state, String type, String category, Pageable pageable);
+    Page<ContentDto> getDetail(String lang, String state, String type, String category, Pageable pageable, String title);
 }

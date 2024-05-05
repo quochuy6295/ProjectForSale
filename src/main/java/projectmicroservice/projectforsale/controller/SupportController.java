@@ -34,8 +34,8 @@ public class SupportController {
     public ResponseEntity<DetailResponseDto> getDetail(@PathParam("lang") String lang, @PathParam("scope") String scope,
                                                        @PathParam("state") String state, @PathParam("type") String type,
                                                        @PathParam("offset") Integer offset, @PathParam("limit") Integer limit,
-                                                       @PathParam("category") String category) {
-        DetailResponseDto response = supportService.getDetail(lang, scope, state, type, offset, limit, category);
+                                                       @PathParam("category") String category, @PathParam("title") String title) {
+        DetailResponseDto response = supportService.getDetail(lang, scope, state, type, offset, limit, category, title);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
