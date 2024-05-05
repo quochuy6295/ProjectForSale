@@ -43,9 +43,9 @@ public class SupportServiceImpl implements SupportService {
     }
 
     @Override
-    public DetailResponseDto getDetail(String lang, String scope, String state, String type, Integer offset, Integer limit) {
+    public DetailResponseDto getDetail(String lang, String scope, String state, String type, Integer offset, Integer limit, String category) {
         Pageable pageable = new CustomPage(offset, limit);
-        Page<ContentDto> responseDto = ubiSupportRepository.getDetail(lang, scope, state, pageable);
+        Page<ContentDto> responseDto = ubiSupportRepository.getDetail(lang, state, type, category, pageable);
         return DetailResponseDto.convertPage(responseDto);
     }
 }

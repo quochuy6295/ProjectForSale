@@ -33,8 +33,9 @@ public class SupportController {
     @GetMapping(value = "/detail")
     public ResponseEntity<DetailResponseDto> getDetail(@PathParam("lang") String lang, @PathParam("scope") String scope,
                                                        @PathParam("state") String state, @PathParam("type") String type,
-                                                       @PathParam("offset") Integer offset, @PathParam("limit") Integer limit) {
-        DetailResponseDto response = supportService.getDetail(lang, scope, state, type, offset, limit);
+                                                       @PathParam("offset") Integer offset, @PathParam("limit") Integer limit,
+                                                       @PathParam("category") String category) {
+        DetailResponseDto response = supportService.getDetail(lang, scope, state, type, offset, limit, category);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

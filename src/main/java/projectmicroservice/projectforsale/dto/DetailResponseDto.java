@@ -1,13 +1,13 @@
 package projectmicroservice.projectforsale.dto;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 
-import java.awt.print.Pageable;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Data
@@ -26,7 +26,8 @@ public class DetailResponseDto {
 
     private String sort;
 
-    private List<String> sortableField;
+    @Builder.Default
+    private List<String> sortableField = List.of("createdDt");
 
     public static DetailResponseDto convertPage(Page<?> page) {
         return DetailResponseDto

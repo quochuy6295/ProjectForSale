@@ -11,5 +11,5 @@ public interface SupportService {
 
     List<LnbResponseDto> getLnb(String lang, String scope, String state, String type);
 
-    DetailResponseDto getDetail(String lang, String scope, String state, String type, Integer offset, Integer limit);
+    DetailResponseDto getDetail(String lang, String scope, String state, String type, Integer offset, Integer limit, String category);
 }
